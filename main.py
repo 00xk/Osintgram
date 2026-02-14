@@ -124,10 +124,6 @@ parser.add_argument('-o', '--output', help='where to store photos', action='stor
 args = parser.parse_args()
 
 
-if config.getHikerToken():
-    api = HikerCLI(args.id, args.file, args.json, args.command, args.output, args.cookies)
-else:
-    api = Osintgram(args.id, args.file, args.json, args.command, args.output, args.cookies)
 
 
 commands = {
