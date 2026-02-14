@@ -33,16 +33,7 @@ class HikerCLI:
     cli_mode = False
     output_dir = "output"
 
-    def __init__(self, target, is_file, is_json, is_cli, output_dir, clear_cookies):
-        self.output_dir = output_dir or self.output_dir
-        access_key = config.getHikerToken()
-        self.cli_mode = is_cli
-        if not is_cli:
-            print("\nConnect to HikerAPI...")
-        self.api = AppClient(token=access_key)
-        self.setTarget(target)
-        self.writeFile = is_file
-        self.jsonDump = is_json
+   
 
     def setTarget(self, target):
         self.target = target
