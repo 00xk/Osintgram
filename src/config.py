@@ -43,5 +43,3 @@ def getPassword():
         sys.exit(0)
 
 
-def getHikerToken():
-    return config["Credentials"].get("hikerapi_token") or os.getenv("HIKERAPI_TOKEN")
